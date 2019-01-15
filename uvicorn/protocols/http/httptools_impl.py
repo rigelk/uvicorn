@@ -12,7 +12,7 @@ import httptools
 def _get_default_headers():
     current_time = time.time()
     current_date = formatdate(current_time, usegmt=True).encode()
-    return b"".join([b"server: uvicorn\r\ndate: ", current_date, b"\r\n"])
+    return b"".join([b"date: ", current_date, b"\r\n"])
 
 
 def _get_status_line(status_code):
